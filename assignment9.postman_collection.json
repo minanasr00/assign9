@@ -1,0 +1,467 @@
+{
+  "info": {
+    "_postman_id": "1d07d7da-d1bc-41f6-a11c-52149b2e5d13",
+    "name": "assignment9",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "41349421",
+    "_collection_link": "https://go.postman.co/collection/41349421-1d07d7da-d1bc-41f6-a11c-52149b2e5d13?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "users",
+      "item": [
+        {
+          "name": "signUp",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\":\"menanasr\",\r\n    \"email\": \"mena.nasr2@gmail.com\",\r\n    \"password\": \"1111111\",\r\n    \"age\": 16,\r\n    \"phone\":\"01206248591\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/users/signup",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "signup"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "login",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/users/login",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                "login"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateUser",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2M2MzRmNGQyMTFkMTlkODEyZjA3ZSIsImlhdCI6MTc2OTgyMjM3NywiZXhwIjoxNzY5ODI1OTc3fQ.H49RetX3EtYdM70Tsus1lo0s3RuHNxVykZFmJMJZp54",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"mena.nasr55@gmail.com\",\r\n    \"name\":\"nasr\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/users/",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteLogedUser",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2M2M3NmE4ZmJlYWU2OWY4MjkwMyIsImlhdCI6MTc2OTgyNTI0NCwiZXhwIjoxNzY5ODI4ODQ0fQ.iAo5ggu427ZVA_70A_FfpY2MNHIG4TJOfIPvJHDqnKA",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/users/",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getLoggedUserData",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2OTU2YWU1NzdiODRhYTM1ZjFiOSIsImlhdCI6MTc2OTgyNjY1NCwiZXhwIjoxNzY5ODMwMjU0fQ.DF09pvmNLg2IqjpRIDjzd4Z_bxu0QAmC3GpEb84ccqM",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/users/",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "users",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "notes",
+      "item": [
+        {
+          "name": "addNote",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2OTU2YWU1NzdiODRhYTM1ZjFiOSIsImlhdCI6MTc2OTgzMDI5MywiZXhwIjoxNzY5ODMzODkzfQ.biivoWnYo0HinFiWNfUa2I3RlvhXlyyssxL2FAYi7y8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\" : \"mina\",\r\n    \"content\" :\"Hello world\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/notes/",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                ""
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateNote",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2OTU2YWU1NzdiODRhYTM1ZjFiOSIsImlhdCI6MTc2OTgzMDI5MywiZXhwIjoxNzY5ODMzODkzfQ.biivoWnYo0HinFiWNfUa2I3RlvhXlyyssxL2FAYi7y8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"easdweq\",\r\n    \"content\":\"hello from the other side\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/notes/697d7cb26a09584d12884db8",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "697d7cb26a09584d12884db8"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "replaceNote",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2OTU2YWU1NzdiODRhYTM1ZjFiOSIsImlhdCI6MTc2OTgzMDI5MywiZXhwIjoxNzY5ODMzODkzfQ.biivoWnYo0HinFiWNfUa2I3RlvhXlyyssxL2FAYi7y8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"replaced\",\r\n    \"content\":\"this is content\",\r\n    \"userId\":\"697d6956ae577b84aa35f1b9\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/notes/replace/697d7cb26a09584d12884db8",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "replace",
+                "697d7cb26a09584d12884db8"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updateAllUserNotes",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2OTU2YWU1NzdiODRhYTM1ZjFiOSIsImlhdCI6MTc2OTgzODExMSwiZXhwIjoxNzY5ODQxNzExfQ.lyYvEjDQXSRkryDyhAPOOXjPsD_Rshbzh-2oEiQPrts",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"new title\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/notes/all",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "all"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "deleteNote",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2OTU2YWU1NzdiODRhYTM1ZjFiOSIsImlhdCI6MTc2OTkwNzI5NywiZXhwIjoxNzY5OTEwODk3fQ.U9SsgCxl9Eq6ZZo3UH0YNvOUtODuliQMrzLdV_7XhEk",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"new title\"\r\n}"
+            },
+            "url": {
+              "raw": "localhost:3000/notes/697ea481cd23331251a9b759",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "697ea481cd23331251a9b759"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getNotesWithPagination",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2OTU2YWU1NzdiODRhYTM1ZjFiOSIsImlhdCI6MTc2OTkxNDkwNCwiZXhwIjoxNzY5OTE4NTA0fQ.EHBLQdKjDXVr_vzEoqW8LHOSTcQJt0T-3w_ngfCj8x4",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/notes/paginate-sort?page=2&limit=3",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "paginate-sort"
+              ],
+              "query": [
+                {
+                  "key": "page",
+                  "value": "2"
+                },
+                {
+                  "key": "limit",
+                  "value": "3"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getUserNote",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2OTU2YWU1NzdiODRhYTM1ZjFiOSIsImlhdCI6MTc2OTkxNDkwNCwiZXhwIjoxNzY5OTE4NTA0fQ.EHBLQdKjDXVr_vzEoqW8LHOSTcQJt0T-3w_ngfCj8x4",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/notes/697d963a41c0b4e9e4135640",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "697d963a41c0b4e9e4135640"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getNoteByContent",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2OTU2YWU1NzdiODRhYTM1ZjFiOSIsImlhdCI6MTc2OTkxNDkwNCwiZXhwIjoxNzY5OTE4NTA0fQ.EHBLQdKjDXVr_vzEoqW8LHOSTcQJt0T-3w_ngfCj8x4",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/notes/note-by-content?search=mina",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "note-by-content"
+              ],
+              "query": [
+                {
+                  "key": "search",
+                  "value": "mina"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "note-with-user",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2OTU2YWU1NzdiODRhYTM1ZjFiOSIsImlhdCI6MTc2OTkxNDkwNCwiZXhwIjoxNzY5OTE4NTA0fQ.EHBLQdKjDXVr_vzEoqW8LHOSTcQJt0T-3w_ngfCj8x4",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/notes/note-with-user",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                "note-with-user"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "aggregate",
+          "request": {
+            "method": "GET",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "deleteAllNotes",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "barear eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5N2Q2OTU2YWU1NzdiODRhYTM1ZjFiOSIsImlhdCI6MTc2OTkxODc2OSwiZXhwIjoxNzY5OTIyMzY5fQ.Up2uOVh54oMZKRZxjXkQ4FOyLzwpZDuhdb1ul4qFc1c",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/notes/",
+              "host": [
+                "localhost"
+              ],
+              "port": "3000",
+              "path": [
+                "notes",
+                ""
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
